@@ -1,0 +1,48 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 319,
+            "y": 56
+          },
+          "nodeIndex": "Data",
+          "nodeLineageTag": "d5b79391-ca20-46fa-b32e-2110801663aa",
+          "size": {
+            "height": 430,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 52
+          },
+          "nodeIndex": "부서및직무정보",
+          "nodeLineageTag": "ea7b3b48-b55c-43ce-9923-267e695f62ed",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "모든 테이블",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "모든 테이블",
+  "defaultDiagram": "모든 테이블"
+}
