@@ -27,11 +27,11 @@ table 부서및직무정보
 
 		annotation SummarizationSetBy = Automatic
 
-	column deptName
+	column 부서명
 		dataType: string
 		lineageTag: 7f413aae-f0c6-40a6-ad32-0b7884801871
 		summarizeBy: none
-		sourceColumn: deptName
+		sourceColumn: 부서명
 
 		annotation SummarizationSetBy = Automatic
 
@@ -42,10 +42,9 @@ table 부서및직무정보
 				    원본 = Excel.Workbook(File.Contents("C:\Users\havef\OneDrive - onionbi.co.kr\_ONIONBI\02 Training\01 Personal\02 Offline\01 Group\01_기본반\02 수업자료_v3.0\01_직원현황데이터_샘플.xlsx"), null, true),
 				    부서및직무정보_Sheet = 원본{[Item="부서및직무정보",Kind="Sheet"]}[Data],
 				    #"승격된 헤더" = Table.PromoteHeaders(부서및직무정보_Sheet, [PromoteAllScalars=true]),
-				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"직무ID", Int64.Type}, {"직무명", type text}, {"부서ID", Int64.Type}, {"부서명", type text}}),
-				    #"Renamed Columns" = Table.RenameColumns(#"변경된 유형",{{"부서명", "deptName"}})
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"직무ID", Int64.Type}, {"직무명", type text}, {"부서ID", Int64.Type}, {"부서명", type text}})
 				in
-				    #"Renamed Columns"
+				    #"변경된 유형"
 
 	annotation PBI_ResultType = Table
 

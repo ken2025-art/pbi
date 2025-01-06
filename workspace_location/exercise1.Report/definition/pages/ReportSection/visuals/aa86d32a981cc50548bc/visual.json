@@ -23,11 +23,11 @@
                       "Entity": "부서및직무정보"
                     }
                   },
-                  "Property": "deptName"
+                  "Property": "부서명"
                 }
               },
               "queryRef": "부서및직무정보.부서명",
-              "nativeQueryRef": "deptName",
+              "nativeQueryRef": "부서명",
               "active": true
             }
           ]
