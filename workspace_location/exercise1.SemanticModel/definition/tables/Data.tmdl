@@ -2,7 +2,7 @@ table Data
 	lineageTag: d5b79391-ca20-46fa-b32e-2110801663aa
 
 	measure noOfEmp = Distinctcount('Data'[직원ID])
-		formatString: "#,0"
+		formatString: #,0
 		lineageTag: 2a6a8ccf-46b8-4c13-9b02-503be40f4ba2
 
 	column 직원ID
