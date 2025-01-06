@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.4.0/schema.json",
   "name": "baf919168e57090dd8a4",
   "position": {
-    "x": 33.134328358208954,
-    "y": 163.88059701492537,
+    "x": 24.188976377952756,
+    "y": 25.196850393700789,
     "z": 0,
-    "height": 525.67164179104475,
-    "width": 1221.4925373134329,
+    "height": 459.59055118110234,
+    "width": 1132.8503937007874,
     "tabOrder": 0
   },
   "visual": {
@@ -204,59 +204,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "error": [
-        {
-          "properties": {
-            "errorRange": {
-              "kind": "ErrorRange",
-              "symmetricalExplicit": {
-                "delta": {
-                  "expr": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "AMZN_data_1999_2022"
-                            }
-                          },
-                          "Property": "High"
-                        }
-                      },
-                      "Function": 1
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "Sum(AMZN_data_1999_2022.Adj Close)",
-            "highlightMatching": 1
-          }
-        },
-        {
-          "properties": {
-            "enabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(AMZN_data_1999_2022.Adj Close)"
           }
         }
       ]
