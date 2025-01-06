@@ -14,7 +14,7 @@ table 부서및직무정보
 		dataType: string
 		lineageTag: 08853cac-3916-452c-841d-a7ffa89e54c2
 		summarizeBy: none
-		sourceColumn: 직무명
+		sourceColumn: positionName
 
 		annotation SummarizationSetBy = Automatic
 

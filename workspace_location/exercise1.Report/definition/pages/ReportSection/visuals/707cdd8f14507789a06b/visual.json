@@ -38,11 +38,11 @@
                       "Entity": "부서및직무정보"
                     }
                   },
-                  "Property": "직무명"
+                  "Property": "positionName"
                 }
               },
-              "queryRef": "부서및직무정보.직무명",
-              "nativeQueryRef": "직무명",
+              "queryRef": "부서및직무정보.positionName",
+              "nativeQueryRef": "positionName",
               "active": false
             }
           ]
