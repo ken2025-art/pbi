@@ -1,0 +1,24 @@
+model Model
+	culture: ko-KR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ko-KR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Data","부서및직무정보"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.138.1452.0 (24.11)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Data
+ref table DateTableTemplate_2a54c273-1a55-4ca7-b74c-f05ad0eb0096
+ref table LocalDateTable_29b8f329-5586-4fd2-93c4-4421ebd893a4
+ref table LocalDateTable_f7ac4415-0767-40ca-b482-5f6fde436925
+ref table 부서및직무정보
+
+ref cultureInfo ko-KR
+

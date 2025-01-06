@@ -1,0 +1,50 @@
+table 부서및직무정보
+	lineageTag: ea7b3b48-b55c-43ce-9923-267e695f62ed
+
+	column 직무ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 99796933-3442-4093-9c20-28ebecf57c9f
+		summarizeBy: none
+		sourceColumn: 직무ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column positionName
+		dataType: string
+		lineageTag: 08853cac-3916-452c-841d-a7ffa89e54c2
+		summarizeBy: none
+		sourceColumn: positionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 부서ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6466e9b6-2775-4fbb-b889-351ab843d597
+		summarizeBy: none
+		sourceColumn: 부서ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 부서명
+		dataType: string
+		lineageTag: 7f413aae-f0c6-40a6-ad32-0b7884801871
+		summarizeBy: none
+		sourceColumn: 부서명
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 부서및직무정보 = m
+		mode: import
+		source =
+				let
+				    원본 = Excel.Workbook(File.Contents("C:\Users\havef\OneDrive - onionbi.co.kr\_ONIONBI\02 Training\01 Personal\02 Offline\01 Group\01_기본반\02 수업자료_v3.0\01_직원현황데이터_샘플.xlsx"), null, true),
+				    부서및직무정보_Sheet = 원본{[Item="부서및직무정보",Kind="Sheet"]}[Data],
+				    #"승격된 헤더" = Table.PromoteHeaders(부서및직무정보_Sheet, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"직무ID", Int64.Type}, {"직무명", type text}, {"부서ID", Int64.Type}, {"부서명", type text}})
+				in
+				    #"변경된 유형"
+
+	annotation PBI_ResultType = Table
+
