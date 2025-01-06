@@ -10,10 +10,10 @@
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "treemap",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
-        "Group": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -32,7 +32,7 @@
             }
           ]
         },
-        "Values": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -83,7 +83,15 @@
     "objects": {
       "labels": [
         {
-          "properties": {}
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Percent of total'"
+                }
+              }
+            }
+          }
         }
       ]
     },
