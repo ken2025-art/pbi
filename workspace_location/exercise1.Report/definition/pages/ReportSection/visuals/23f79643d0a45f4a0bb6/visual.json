@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.4.0/schema.json",
-  "name": "116d57bd890b35ba2a98",
+  "name": "23f79643d0a45f4a0bb6",
   "position": {
-    "x": 273.99014778325125,
+    "x": 451.33004926108373,
     "y": 16.847290640394089,
-    "z": 9000,
+    "z": 9001,
     "height": 108.17733990147784,
     "width": 155.17241379310346,
-    "tabOrder": 8000
+    "tabOrder": 9001
   },
   "visual": {
     "visualType": "card",
@@ -17,22 +17,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Data"
-                        }
-                      },
-                      "Property": "직원ID"
+                    "SourceRef": {
+                      "Entity": "Data"
                     }
                   },
-                  "Function": 5
+                  "Property": "noOfEmp"
                 }
               },
-              "queryRef": "CountNonNull(Data.직원ID)",
-              "nativeQueryRef": "직원ID개"
+              "queryRef": "Data.noOfEmp",
+              "nativeQueryRef": "noOfEmp"
             }
           ]
         }
@@ -41,18 +36,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Data"
-                      }
-                    },
-                    "Property": "직원ID"
+                  "SourceRef": {
+                    "Entity": "Data"
                   }
                 },
-                "Function": 5
+                "Property": "noOfEmp"
               }
             },
             "direction": "Descending"
