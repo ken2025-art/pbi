@@ -1,0 +1,204 @@
+table Data
+	lineageTag: d5b79391-ca20-46fa-b32e-2110801663aa
+
+	measure noOfEmp = Distinctcount('Data'[직원ID])
+		formatString: #,0
+		lineageTag: 2a6a8ccf-46b8-4c13-9b02-503be40f4ba2
+
+	column 직원ID
+		dataType: int64
+		formatString: 0
+		lineageTag: eb948022-17db-4c2e-8f3b-73aea42ad138
+		summarizeBy: count
+		sourceColumn: 직원ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 근무지역
+		dataType: string
+		lineageTag: ebbb453b-076c-450c-aa5f-eaf8fd05a9c4
+		summarizeBy: none
+		sourceColumn: 근무지역
+
+		annotation SummarizationSetBy = Automatic
+
+	column 직원이름
+		dataType: string
+		lineageTag: 024239e0-0bb9-4b48-891e-76f6d9faf246
+		summarizeBy: none
+		sourceColumn: 직원이름
+
+		annotation SummarizationSetBy = Automatic
+
+	column 입사일자
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6f630476-3bfa-4681-ab23-7c3868211460
+		summarizeBy: none
+		sourceColumn: 입사일자
+
+		variation 변형
+			isDefault
+			relationship: 0d009aa9-3db8-46ff-a453-4d1a6956d1a6
+			defaultHierarchy: LocalDateTable_29b8f329-5586-4fd2-93c4-4421ebd893a4.'날짜 계층'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 퇴사일자
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dbf6ffcf-5026-442e-af3a-1e848bdc23c3
+		summarizeBy: none
+		sourceColumn: 퇴사일자
+
+		variation 변형
+			isDefault
+			relationship: 953255f2-d5b5-4bcb-a56a-6267ef90a8ee
+			defaultHierarchy: LocalDateTable_f7ac4415-0767-40ca-b482-5f6fde436925.'날짜 계층'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 성별
+		dataType: string
+		lineageTag: 970ea587-2e51-4746-96db-d07e903b34d3
+		summarizeBy: none
+		sourceColumn: 성별
+
+		annotation SummarizationSetBy = Automatic
+
+	column 고용상태
+		dataType: string
+		lineageTag: ff01b376-32ea-4c48-aba7-2cf623b7050e
+		summarizeBy: none
+		sourceColumn: 고용상태
+
+		annotation SummarizationSetBy = Automatic
+
+	column 부서ID
+		dataType: int64
+		formatString: 0
+		lineageTag: d36be8d7-a136-4713-a5b2-2fde2711e69b
+		summarizeBy: count
+		sourceColumn: 부서ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 직무ID
+		dataType: int64
+		formatString: 0
+		lineageTag: c37a7c17-0adb-4ddd-962b-35dcf143324c
+		summarizeBy: none
+		sourceColumn: 직무ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 매니저ID
+		dataType: int64
+		formatString: 0
+		lineageTag: cac79ce4-c6c7-4300-9300-2ac63a13a760
+		summarizeBy: count
+		sourceColumn: 매니저ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 매니저명
+		dataType: string
+		lineageTag: f204eb62-aa5b-45f8-ad22-7cfee310bc7b
+		summarizeBy: none
+		sourceColumn: 매니저명
+
+		annotation SummarizationSetBy = Automatic
+
+	column 생년월일
+		dataType: string
+		lineageTag: 55ddb0ee-a24c-457d-b2fe-1fcc48c02800
+		summarizeBy: none
+		sourceColumn: 생년월일
+
+		annotation SummarizationSetBy = Automatic
+
+	column 퇴직사유
+		dataType: string
+		lineageTag: c6ac2e4c-38ef-48e4-8e66-7c98d9abb2a1
+		summarizeBy: none
+		sourceColumn: 퇴직사유
+
+		annotation SummarizationSetBy = Automatic
+
+	column 채용루트
+		dataType: string
+		lineageTag: 43b8bde0-92af-440a-890a-e4d865f9df9c
+		summarizeBy: none
+		sourceColumn: 채용루트
+
+		annotation SummarizationSetBy = Automatic
+
+	column 성취도
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f427341-aedc-4d70-b84c-b0f02b7d96f1
+		summarizeBy: sum
+		sourceColumn: 성취도
+
+		annotation SummarizationSetBy = Automatic
+
+	column 급여수준
+		dataType: double
+		lineageTag: 611367a8-7281-4df9-89cc-1fe0c7884f92
+		summarizeBy: sum
+		sourceColumn: 급여수준
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 몰입도
+		dataType: double
+		lineageTag: bdbdbb9d-064c-454b-ad7c-f1152b388bab
+		summarizeBy: sum
+		sourceColumn: 몰입도
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 만족도
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fdfc8ce-fe71-427d-a743-c9cac2191f06
+		summarizeBy: sum
+		sourceColumn: 만족도
+
+		annotation SummarizationSetBy = Automatic
+
+	column 프로젝트참여건수
+		dataType: int64
+		formatString: 0
+		lineageTag: c631d65e-03e9-4dab-91be-21bd741708e6
+		summarizeBy: sum
+		sourceColumn: 프로젝트참여건수
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Data = m
+		mode: import
+		source =
+				let
+				    원본 = Excel.Workbook(File.Contents("C:\Users\havef\OneDrive - onionbi.co.kr\_ONIONBI\02 Training\01 Personal\02 Offline\01 Group\01_기본반\02 수업자료_v3.0\01_직원현황데이터_샘플.xlsx"), null, true),
+				    Data_Sheet = 원본{[Item="Data",Kind="Sheet"]}[Data],
+				    #"승격된 헤더" = Table.PromoteHeaders(Data_Sheet, [PromoteAllScalars=true]),
+				    #"변경된 유형" = Table.TransformColumnTypes(#"승격된 헤더",{{"직원ID", Int64.Type}, {"근무지역", type text}, {"직원이름", type text}, {"입사일자", type date}, {"퇴사일자", type date}, {"성별", type text}, {"고용상태", type text}, {"부서ID", Int64.Type}, {"직무ID", Int64.Type}, {"매니저ID", Int64.Type}, {"매니저명", type text}, {"생년월일", type text}, {"퇴직사유", type text}, {"채용루트", type text}, {"성취도", Int64.Type}, {"급여수준", type number}, {"몰입도", type number}, {"만족도", Int64.Type}, {"프로젝트참여건수", Int64.Type}}),
+				    #"추출된 구분 기호 앞 텍스트" = Table.TransformColumns(#"변경된 유형", {{"직원이름", each Text.BeforeDelimiter(_, ","), type text}}),
+				    #"필터링된 행" = Table.SelectRows(#"추출된 구분 기호 앞 텍스트", each ([성별] = "F")),
+				    #"추출된 처음 문자" = Table.TransformColumns(#"필터링된 행", {{"근무지역", each Text.Start(_, 2), type text}})
+				in
+				    #"추출된 처음 문자"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = 탐색
+

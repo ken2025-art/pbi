@@ -1,0 +1,14 @@
+relationship 0d009aa9-3db8-46ff-a453-4d1a6956d1a6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Data.입사일자
+	toColumn: LocalDateTable_29b8f329-5586-4fd2-93c4-4421ebd893a4.Date
+
+relationship 953255f2-d5b5-4bcb-a56a-6267ef90a8ee
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Data.퇴사일자
+	toColumn: LocalDateTable_f7ac4415-0767-40ca-b482-5f6fde436925.Date
+
+relationship 2a719791-a684-413e-97fc-c82e88393615
+	fromColumn: Data.직무ID
+	toColumn: 부서및직무정보.직무ID
+
